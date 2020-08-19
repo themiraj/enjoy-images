@@ -3,17 +3,8 @@ import {Container,Grid,Paper,Box,Button} from '@material-ui/core';
 import axios from 'axios';
 
 class Home extends React.Component {
-    state = {
-        persons: []
-      }
-      componentDidMount() {
-        axios.get(`https://jsonplaceholder.typicode.com/users`)
-        .then(res => {
-          const persons = res.data;
-          this.setState({ persons });
-        })
-      }
     render() {
+        console.log(process.env.REACT_APP_API_KEY)
         return (
             <Grid container spacing={3}>
 
